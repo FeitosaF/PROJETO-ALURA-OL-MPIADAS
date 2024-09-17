@@ -57,7 +57,22 @@ button{
 .atletas-resultados h2 a{
     text-decoration: none;
     color: rgba(19, 19, 55, 0.781);
+    position: relative;
 }
+.atletas-resultados h2 a::after{
+    content: "";
+    position: absolute;
+    bottom: 0.0rem;
+    left: 0px;
+    width: 0;
+    height: 0.2rem;
+    background: rgba(19, 19, 55, 0.781);
+    transition: all 300ms ease-in-out;
+}
+.atletas-resultados h2 a:hover::after{
+   width: 100%;
+}
+
 .descricao{
     font-family: sans-serif; 
     color: rgba(19, 19, 55, 0.781);
@@ -68,6 +83,12 @@ button{
     font-family: sans-serif; 
     color: rgba(19, 19, 55, 0.781);
 }
+    
+    .bad {
+        background: rgb(246, 125, 125);
+        padding: 10px 20px;
+        border-radius: 20px;
+    }
 
 footer{
     background: white;

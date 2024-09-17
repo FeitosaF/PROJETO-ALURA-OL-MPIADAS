@@ -4,13 +4,15 @@
 console.log(dados[1]);
 console.log(dados[0].descricao);*/
 
+
 function pesquisar(){
+
   let section = document.getElementById ('atletas');
 
   let campoPesquisa = document.getElementById("campo-pesquisa").value;
 
 if (!campoPesquisa) { // Condiçao como campo de busca vazio
-  section.innerHTML = "<p> Nada foi encontrado. Você precisa digitar o nome de um atleta ou esporte </p>";
+  section.innerHTML = "<p class = 'bad'> Nada foi encontrado. Você precisa digitar o nome de um atleta ou esporte </p>";
   return
 }
 
@@ -41,9 +43,11 @@ campoPesquisa = campoPesquisa.toLowerCase();
   };
 
   if (!resultados) {
-    resultados = "<p> Nada foi encontrado </p>";
+    resultados = "<p class = 'bad'> Nada foi encontrado </p>";
+    
   }
   section.innerHTML = resultados;
- 
+
+
 } 
 
